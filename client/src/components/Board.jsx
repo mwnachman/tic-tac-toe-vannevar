@@ -8,7 +8,7 @@ const xImage = require('../assets/X.png')
 const oImage = require('../assets/O.png')
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-const Board = ({makeMove}) => {
+const Board = ({board, makeMove}) => {
   const styles = useStyles()
   return (
     <div className={styles.board}>
@@ -19,10 +19,10 @@ const Board = ({makeMove}) => {
           key={number}
           onClick={() => makeMove(number)}>
             
-            {game[number] === "X" &&
+            {board[number] === "X" &&
               <img alt="X" src={xImage} />
             }
-            {game[number] === "O" &&
+            {board[number] === "O" &&
               <img alt="O" src={oImage} />
             }
 
