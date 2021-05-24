@@ -3,24 +3,30 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(6),
-    width: '100%',
-    height: '600px',
   },
-  exterior_grid: {
-    minHeight: '70vh',
+  form: {
+    height: 70
   },
-  interior_grid: {
-    minWidth: '90%',
+  header: {
+    textAlign: 'center',
+    fontSize: 18,
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1)
   },
-  xOrY: {
-    width: 320,
+  buttonGroup: {
+    width: 280,
     margin: '0 auto'
   },
-  formLabel: {
-    fontSize: 24,
-  }
+  button: {
+    width: 60,
+    marginLeft: 50,
+  },
+  newGameButton: {
+    paddingTop: theme.spacing(5),
+    margin: '0 auto',
+    textAlign: 'center',
+    width: 125,
+  },
 }))
 
 export default useStyles

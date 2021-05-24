@@ -1,11 +1,12 @@
 {
-  "name": "CIS550_Final_Project",
+  "name": "Vannevar",
   "version": "1.0.0",
   "description": "Tic Tac Toe",
   "main": "index.js",
   "scripts": {
     "copy": "mkdir -p build/$NODE_ENV && cp -r src/index.html src/assets build/$NODE_ENV",
     "copy:dev": "NODE_ENV=development npm run copy",
+    "lint": "eslint --ext .js --ext .jsx client/src",
     "start": "npm run copy:dev && NODE_ENV=development webpack-dev-server --progress --colors --hot --config ./webpack.js --mode development"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
     "file-loader": "^6.2.0",
     "lodash": "^4.17.21",
     "path": "^0.12.7",
+    "pre-commit": "^1.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.9.0",
@@ -37,5 +39,8 @@
     "eslint-plugin-react": "^7.12.3",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.1.9"
-  }
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }

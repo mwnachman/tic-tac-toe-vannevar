@@ -1,0 +1,21 @@
+service: tic-tac-toe-server
+provider:
+  name: aws
+  stage: production
+  runtime: nodejs14.x
+  memorySize: 128
+functions:
+  sonalysis-server:
+    handler: index.handler
+    runtime: nodejs14.x
+    provisionedConcurrency: 3
+    events: 
+      - http: 
+          path: /
+          method: ANY
+          cors: true
+      - http: 
+          path: /{proxy+}
+          method: ANY
+          cors: true
+          

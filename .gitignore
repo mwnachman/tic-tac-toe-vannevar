@@ -5,4 +5,4 @@ node_modules/
 build/
 
 # Environment variables, access tokens, other runtime data
-config/server.json
+server/config/server.json

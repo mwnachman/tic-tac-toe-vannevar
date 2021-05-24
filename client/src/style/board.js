@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     width: 280,
     backgroundColor: '#E24A41',
     margin: '0 auto',
-    marginTop: theme.spacing(16),
+    marginTop: theme.spacing(6),
   },
   'square': {
     width: 80,
@@ -27,6 +27,10 @@ const useStyles = makeStyles(theme => ({
   'square-3': {
     marginRight: 20,
   },
+  mark: {
+    marginLeft: 5,
+    marginTop: 5
+  }
 }))
 
 export default useStyles
